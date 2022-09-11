@@ -246,7 +246,7 @@ export type CommentHandler = (comment: string) => void;
  *
  * @param tag The tag.
  */
-export type OpenTagStartHandler<O extends SaxesOptions> = 
+export type OpenTagStartHandler<O extends SaxesOptions> =
   (tag: StartTagForOptions<O>) => void;
 
 export type AttributeEventForOptions<O extends SaxesOptions> =
@@ -266,7 +266,7 @@ export type AttributeHandler<O extends SaxesOptions> =
  *
  * @param tag The tag.
  */
-export type OpenTagHandler<O extends SaxesOptions> = 
+export type OpenTagHandler<O extends SaxesOptions> =
   (tag: TagForOptions<O>) => void;
 
 /**
@@ -275,7 +275,7 @@ export type OpenTagHandler<O extends SaxesOptions> =
  *
  * @param tag The tag.
  */
-export type CloseTagHandler<O extends SaxesOptions> = 
+export type CloseTagHandler<O extends SaxesOptions> =
   (tag: TagForOptions<O>) => void;
 
 /**
