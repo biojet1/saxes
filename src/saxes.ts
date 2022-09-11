@@ -256,7 +256,7 @@ export type AttributeEventForOptions<O extends SaxesOptions> =
 /**
  * Event handler for attributes.
  */
-export type AttributeHandler<O extends StartTagForOptions> =
+export type AttributeHandler<O extends SaxesOptions> =
   (attribute: AttributeEventForOptions<O>) => void;
 
 /**
@@ -265,7 +265,7 @@ export type AttributeHandler<O extends StartTagForOptions> =
  *
  * @param tag The tag.
  */
-export type OpenTagHandler<O extends StartTagForOptions> = (tag: TagForOptions<O>) => void;
+export type OpenTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => void;
 
 /**
  * Event handler for a close tag. Note that for self-closing tags, this is
@@ -273,7 +273,7 @@ export type OpenTagHandler<O extends StartTagForOptions> = (tag: TagForOptions<O
  *
  * @param tag The tag.
  */
-export type CloseTagHandler<O> = (tag: TagForOptions<O>) => void;
+export type CloseTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => void;
 
 /**
  * Event handler for a CDATA section. This is called when ending the
