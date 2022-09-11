@@ -246,7 +246,8 @@ export type CommentHandler = (comment: string) => void;
  *
  * @param tag The tag.
  */
-export type OpenTagStartHandler<O extends SaxesOptions> = (tag: StartTagForOptions<O>) => void;
+export type OpenTagStartHandler<O extends SaxesOptions> = 
+  (tag: StartTagForOptions<O>) => void;
 
 export type AttributeEventForOptions<O extends SaxesOptions> =
   O extends { xmlns: true } ? SaxesAttributeNSIncomplete :
@@ -265,7 +266,8 @@ export type AttributeHandler<O extends SaxesOptions> =
  *
  * @param tag The tag.
  */
-export type OpenTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => void;
+export type OpenTagHandler<O extends SaxesOptions> = 
+  (tag: TagForOptions<O>) => void;
 
 /**
  * Event handler for a close tag. Note that for self-closing tags, this is
@@ -273,7 +275,8 @@ export type OpenTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => 
  *
  * @param tag The tag.
  */
-export type CloseTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => void;
+export type CloseTagHandler<O extends SaxesOptions> = 
+  (tag: TagForOptions<O>) => void;
 
 /**
  * Event handler for a CDATA section. This is called when ending the
