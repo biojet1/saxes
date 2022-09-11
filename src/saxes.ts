@@ -246,7 +246,7 @@ export type CommentHandler = (comment: string) => void;
  *
  * @param tag The tag.
  */
-export type OpenTagStartHandler<O extends StartTagForOptions> = (tag: StartTagForOptions<O>) => void;
+export type OpenTagStartHandler<O extends SaxesOptions> = (tag: StartTagForOptions<O>) => void;
 
 export type AttributeEventForOptions<O extends SaxesOptions> =
   O extends { xmlns: true } ? SaxesAttributeNSIncomplete :
