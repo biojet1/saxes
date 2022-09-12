@@ -306,16 +306,16 @@ export type ReadyHandler = () => void;
 export type ErrorHandler = (err: Error) => void;
 
 export type EventName = (typeof EVENTS)[number];
-export type EventNameToHandler<O, N extends EventName> = {
+export type EventNameToHandler<O extends SaxesOptions, N extends EventName> = {
   "xmldecl": XMLDeclHandler;
   "text": TextHandler;
   "processinginstruction": PIHandler;
   "doctype": DoctypeHandler;
   "comment": CommentHandler;
-  "opentagstart": OpenTagStartHandler<O extends SaxesOptions>;
-  "attribute": AttributeHandler<O extends SaxesOptions>;
-  "opentag": OpenTagHandler<O extends SaxesOptions>;
-  "closetag": CloseTagHandler<O extends SaxesOptions>;
+  "opentagstart": OpenTagStartHandler<O>;
+  "attribute": AttributeHandler<O>;
+  "opentag": OpenTagHandler<O>;
+  "closetag": CloseTagHandler<O>;
   "cdata": CDataHandler;
   "error": ErrorHandler;
   "end": EndHandler;
