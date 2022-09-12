@@ -312,10 +312,10 @@ export type EventNameToHandler<O, N extends EventName> = {
   "processinginstruction": PIHandler;
   "doctype": DoctypeHandler;
   "comment": CommentHandler;
-  "opentagstart": OpenTagStartHandler<O>;
-  "attribute": AttributeHandler<O>;
-  "opentag": OpenTagHandler<O>;
-  "closetag": CloseTagHandler<O>;
+  "opentagstart": OpenTagStartHandler<O extends SaxesOptions>;
+  "attribute": AttributeHandler<O extends SaxesOptions>;
+  "opentag": OpenTagHandler<O extends SaxesOptions>;
+  "closetag": CloseTagHandler<O extends SaxesOptions>;
   "cdata": CDataHandler;
   "error": ErrorHandler;
   "end": EndHandler;
