@@ -42,7 +42,7 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@github.com"
           git rm -rf .
-          mv -rv ../master/build/dist/*  .
+          mv -t . ../master/build/dist/
           git add -A
           if [[ -z $(git status -s) ]]
           then
